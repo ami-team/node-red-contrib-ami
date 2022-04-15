@@ -1,0 +1,27 @@
+{
+  "name": "node-red-contrib-ami",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ami-team/node-red-contrib-ami.git"
+  },
+  "keywords": [
+    "ami",
+    "metadata",
+    "tasks",
+    "pipeline"
+  ],
+  "author": "Odier Jérôme, Lambert Fabian",
+  "license": "SEE LICENSE IN <LICENSE>",
+  "node-red" : {
+    "nodes": {
+      "supervisor": "./lib/01_supervisor.js",
+      "command": "./lib/02_command.js",
+      "task": "./lib/03_task.js"
+    }
+  }
+}
