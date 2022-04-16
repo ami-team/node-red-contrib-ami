@@ -5,6 +5,21 @@
 		defaults: {
 			name: {
 				value: ''
+			},
+			server: {
+				value: ''
+			},
+			command: {
+				value: ''
+			},
+			description: {
+				value: ''
+			},
+			priority: {
+				value: ''
+			},
+			time_step: {
+				value: ''
 			}
 		},
 		inputs: 1,
@@ -19,7 +34,27 @@
 <script type="text/html" data-template-name="task">
 	<div class="form-row">
 		<label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-		<input type="text" id="node-input-name" placeholder="Name">
+		<input type="text" id="node-input-name" placeholder="Name" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-server"><i class="fa fa-server"></i> Server</label>
+		<input type="text" id="node-input-server" placeholder="Server name" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-command"><i class="fa fa-code"></i> Command</label>
+		<textarea row="6" id="node-input-command" placeholder="Command"></textarea>
+	</div>
+	<div class="form-row">
+		<label for="node-input-description"><i class="fa fa-tag"></i> Description</label>
+		<input type="text" id="node-input-description" placeholder="Description" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-priority"><i class="fa fa-clock-o"></i> Priority</label>
+		<input type="number" id="node-input-priority" min="0" placeholder="Priority" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-time_step"><i class="fa fa-clock-o"></i> Time step</label>
+		<input type="number" id="node-input-time_step" min="0" placeholder="Time step" />
 	</div>
 </script>
 
