@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Trochut&display=swap');
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#red-ui-header {
+    background-color: #007bff !important;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#red-ui-header .red-ui-header-logo {
+    font-size: inherit !important;
+    line-height: 38px !important;
+    margin-top: 0 !important;
+}
+
+#red-ui-header .red-ui-header-logo img {
+    height: 34px !important;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#red-ui-header-button-deploy {
+    background-color: #218838 !important;
+    border-color: #1e7e34 !important;
+    color: #fff !important;
+}
+
+#red-ui-header-button-deploy.disabled {
+    background-color: #5a6268 !important;
+    border-color: #545b62 !important;
+    color: #fff !important;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#red-ui-header-button-sidemenu {
+    border-left: 2px solid #0062cc !important;
+    border-right: 2px solid #0062cc !important;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#red-ui-palette-header-AMI > span {
+    font-family: "Trochut", "Helvetica Neue", "Arial", "Helvetica", "sans-serif" !important;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
