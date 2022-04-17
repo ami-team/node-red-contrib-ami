@@ -32,16 +32,16 @@
 			this.commandEditor = RED.editor.createEditor({
 				id: 'node-input-command',
 				mode: 'ace/mode/nrjavascript',
-				value: this.config.command,
+				value: this.command,
 			});
 		},
 		neditsave: function() {
-			this.config.command = this.commandEditor.getValue();
+			this.command = this.commandEditor.getValue();
 			this.commandEditor.destroy();
 			delete this.commandEditor;
 		},
 		oneditcancel: function() {
-			///////////.command = this.commandEditor.getValue();
+			////.command = this.commandEditor.getValue();
 			this.commandEditor.destroy();
 			delete this.commandEditor;
 		},
