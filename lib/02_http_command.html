@@ -2,6 +2,10 @@
 	RED.nodes.registerType('http command', {
 		category: 'AMI',
 		color: '#a6bbcf',
+		credentials: {
+			username: {type: 'text'},
+			password: {type: 'password'}
+		},
 		defaults: {
 			name: {
 				value: ''
@@ -30,6 +34,14 @@
 	<div class="form-row">
 		<label for="node-input-endpoint"><i class="fa fa-server"></i> Endpoint</label>
 		<input type="text" id="node-input-endpoint" placeholder="Endpoint" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-username"><i class="fa fa-tag"></i> Username</label>
+		<input type="text" id="node-input-username">
+	</div>
+	<div class="form-row">
+		<label for="node-input-password"><i class="fa fa-tag"></i> Password</label>
+		<input type="password" id="node-input-password">
 	</div>
 	<div class="form-row">
 		<label for="node-input-command"><i class="fa fa-code"></i> Command</label>
