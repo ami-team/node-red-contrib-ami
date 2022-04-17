@@ -9,6 +9,9 @@
 			description: {
 				value: ''
 			},
+			command: {
+				value: ''
+			},
 			server: {
 				value: ''
 			},
@@ -25,20 +28,20 @@
 		label: function() {
 			return this.name || 'task';
 		},
-		oneditprepare: function() {
+		oneditprepare: () => {
 			this.commandEditor = RED.editor.createEditor({
 				id: 'node-input-command',
 				mode: 'ace/mode/nrjavascript',
-				value: this.command,
+				value: config.command,
 			});
 		},
 		neditsave: function() {
-			this.command = this.commandEditor.getValue();
+			config.command = this.commandEditor.getValue();
 			this.commandEditor.destroy();
 			delete this.commandEditor;
 		},
 		oneditcancel: function() {
-			////.command = this.commandEditor.getValue();
+			//////.command = this.commandEditor.getValue();
 			this.commandEditor.destroy();
 			delete this.commandEditor;
 		},
