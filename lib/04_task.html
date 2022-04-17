@@ -4,22 +4,22 @@
 		color: '#c0deed',
 		defaults: {
 			name: {
-				value: ''
+				value: '', required: false
 			},
 			description: {
-				value: ''
+				value: '', required: false
 			},
 			command: {
-				value: ''
+				value: '', required: true
 			},
 			server: {
-				value: ''
+				value: '', required: true
 			},
 			priority: {
-				value: 0
+				value: 0, required: false
 			},
 			time_step: {
-				value: 60
+				value: 60, required: false
 			}
 		},
 		inputs: 1,
@@ -32,16 +32,16 @@
 			this.commandEditor = RED.editor.createEditor({
 				id: 'node-input-command',
 				mode: 'ace/mode/nrjavascript',
-				value: config.command,
+				value: this.config.command,
 			});
 		},
 		neditsave: function() {
-			config.command = this.commandEditor.getValue();
+			this.config.command = this.commandEditor.getValue();
 			this.commandEditor.destroy();
 			delete this.commandEditor;
 		},
 		oneditcancel: function() {
-			//////.command = this.commandEditor.getValue();
+			///////////.command = this.commandEditor.getValue();
 			this.commandEditor.destroy();
 			delete this.commandEditor;
 		},
