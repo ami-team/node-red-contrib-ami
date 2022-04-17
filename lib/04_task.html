@@ -28,7 +28,7 @@
 		label: function() {
 			return this.name || 'task';
 		},
-		oneditprepare: () => {
+		oneditprepare: function() {
 			this.commandEditor = RED.editor.createEditor({
 				id: 'node-input-command-editor',
 				mode: 'ace/mode/nrjavascript',
@@ -65,8 +65,8 @@
 		<input type="text" id="node-input-server" placeholder="Server" />
 	</div>
 	<div class="form-row">
-		<label for="node-input-command"><i class="fa fa-code"></i> Command</label>
-		<input type="hidden" id="node-input-command" placeholder="Command" />
+		<label for="node-input-command"><i class="fa fa-code"></i> Command script</label>
+		<input type="hidden" id="node-input-command" placeholder="Command script" />
 		<div class="node-text-editor" id="node-input-command-editor" style="height: 250px; min-height: 75px;"></div>
 	</div>
 	<div class="form-row">
