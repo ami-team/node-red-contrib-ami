@@ -29,7 +29,6 @@
 			return this.name || 'task';
 		},
 		oneditprepare: function() {
-			alert('1');
 			this.scriptEditor = RED.editor.createEditor({
 				id: 'E84C4BEA_FCED',
 				mode: 'ace/mode/nrjavascript',
@@ -39,14 +38,12 @@
 				}
 			});
 		},
-		neditsave: function() {
-			alert('2');
+		oneditsave: function() {
 			$('#node-input-script').val(this.scriptEditor.getValue());
 			this.scriptEditor.destroy();
 			delete this.scriptEditor;
 		},
 		oneditcancel: function() {
-			alert('3');
 		//	$('#node-input-script').val(this.scriptEditor.getValue());
 			this.scriptEditor.destroy();
 			delete this.scriptEditor;
@@ -69,7 +66,7 @@
 		<input type="text" id="node-input-server" placeholder="Server" />
 	</div>
 	<div class="form-row">
-		<label for="E84C4BEA_FCED"><i class="fa fa-code"></i> Command script</label>
+		<label for="E84C4BEA_FCED"><i class="fa fa-code"></i> Script</label>
 		<div class="node-text-editor" id="E84C4BEA_FCED" style="height: 250px; min-height: 75px;"></div>
 	</div>
 	<div class="form-row">
