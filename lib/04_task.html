@@ -9,7 +9,7 @@
 			description: {
 				value: '', required: false
 			},
-			command: {
+			script: {
 				value: '', required: true
 			},
 			server: {
@@ -29,29 +29,33 @@
 			return this.name || 'task';
 		},
 		oneditprepare: function() {
-			this.commandEditor = RED.editor.createEditor({
-				id: 'node-input-command-editor',
+			alert('1');
+			this.scriptEditor = RED.editor.createEditor({
+				id: 'E84C4BEA_FCED',
 				mode: 'ace/mode/nrjavascript',
-				value: $('#node-input-command').val(),
+				value: $('#node-input-script').val(),
 				globals: {
 					msg: true
 				}
 			});
 		},
 		neditsave: function() {
-			$('#node-input-command').val(this.commandEditor.getValue());
-			this.commandEditor.destroy();
-			delete this.commandEditor;
+			alert('2');
+			$('#node-input-script').val(this.scriptEditor.getValue());
+			this.scriptEditor.destroy();
+			delete this.scriptEditor;
 		},
 		oneditcancel: function() {
-		//	$('#node-input-command').val(this.commandEditor.getValue());
-			this.commandEditor.destroy();
-			delete this.commandEditor;
+			alert('3');
+		//	$('#node-input-script').val(this.scriptEditor.getValue());
+			this.scriptEditor.destroy();
+			delete this.scriptEditor;
 		},
 	});
 </script>
 
 <script type="text/html" data-template-name="task">
+	<input type="hidden" id="node-input-script" />
 	<div class="form-row">
 		<label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
 		<input type="text" id="node-input-name" placeholder="Name" />
@@ -65,9 +69,8 @@
 		<input type="text" id="node-input-server" placeholder="Server" />
 	</div>
 	<div class="form-row">
-		<label for="node-input-command"><i class="fa fa-code"></i> Command script</label>
-		<input type="hidden" id="node-input-command" placeholder="Command script" />
-		<div class="node-text-editor" id="node-input-command-editor" style="height: 250px; min-height: 75px;"></div>
+		<label for="E84C4BEA_FCED"><i class="fa fa-code"></i> Command script</label>
+		<div class="node-text-editor" id="E84C4BEA_FCED" style="height: 250px; min-height: 75px;"></div>
 	</div>
 	<div class="form-row">
 		<label for="node-input-priority"><i class="fa fa-clock-o"></i> Priority</label>
