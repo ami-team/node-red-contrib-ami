@@ -8,11 +8,11 @@
 			name: {
 				value: '', required: false
 			},
-			server: {
-				value: '', required: false
-			},
 			command: {
 				value: '', required: true
+			},
+			server: {
+				value: '', required: false
 			}
 		},
 		inputs: 1,
@@ -32,12 +32,12 @@
 		<input type="text" id="node-input-name" placeholder="Name" />
 	</div>
 	<div class="form-row">
-		<label for="node-input-server"><i class="fa fa-server"></i> Server</label>
-		<input type="text" id="node-input-server" placeholder="Server" />
-	</div>
-	<div class="form-row">
 		<label for="node-input-command"><i class="fa fa-code"></i> Command</label>
 		<input type="text" id="node-input-command" placeholder="Command" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-server"><i class="fa fa-server"></i> Server</label>
+		<input type="text" id="node-input-server" placeholder="Server (if empty get the supervisor's Server parameter)" />
 	</div>
 </script>
 
